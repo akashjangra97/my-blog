@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<form method="POST" >
+    {% csrf_token %}
+    {% for field in form %}
+    <p>
+        {{field.label_tag}}<br>
+        {{field}}
+        {% if field.help_text %}
+        {% endif %}
+    </p>
+    {% endfor %}
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+    
+
