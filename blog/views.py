@@ -4,7 +4,7 @@ from django.utils import timezone
 from .forms import PostForm,CommentForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login,authenticate
-from django.contrib.auth.forms import UserCreationForm
+
 # it will request info from model and pass it on
 # to the template 
 
@@ -83,5 +83,3 @@ def comment_remove(request, pk):
     return redirect('post_detail', pk=comment.post.pk)
 
 
-def register(request):
-    return render(request,'blog/register.html')

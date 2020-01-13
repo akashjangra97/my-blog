@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'users',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_Root = os.path.join(BASE_DIR, 'static')
 LOGIN_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+Host:  'smtp.gmail.com'
+Port:  '587'
+User:  'jangra9899@gmail.com'
+Password:   'Goldy@9899'
+SSL:  True
+
